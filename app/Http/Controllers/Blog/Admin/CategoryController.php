@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Blog;
+namespace App\Http\Controllers\Blog\Admin;
 
 use Illuminate\Http\Request;
-use App\Models\BlogPost;
+use App\Http\Controllers\Controller;
 
-class PostController extends BaseController
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class PostController extends BaseController
      */
     public function index()
     {
-        $items = BlogPost::/*withTrashed()-> с удаленными записями */all();
-
-        return view('blog.posts.index', compact('items'));
+        //
     }
 
     /**
